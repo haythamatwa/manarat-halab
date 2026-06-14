@@ -161,112 +161,77 @@
 </head>
 
 <body class="antialiased">
-    <!-- شريط التنقل (Navbar) المتكامل مع قائمة الموبايل البلورية -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass text-white py-4">
+   <!-- شريط التنقل (Navbar) المتكامل والمضمون الظهور على الموبايل 100% -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-strong md:glass text-white py-4 shadow-xl md:shadow-none">
         <div class="container mx-auto px-6 flex justify-between items-center relative">
             <!--Logo-->
             <a href="#" class="text-2xl font-bold flex items-center gap-2 group">
-                <i
-                    class="fa-solid fa-graduation-cap text-glow-light text-2xl transition-transform group-hover:rotate-12"></i>
+                <i class="fa-solid fa-graduation-cap text-glow-light text-2xl transition-transform group-hover:rotate-12"></i>
                 <span class="text-white">منارة <span class="text-glow-light">حلب</span></span>
             </a>
 
             <!--روابط التنقل للشاشات الكبيرة (الكمبيوتر)-->
             <div class="hidden md:flex items-center space-x-8 space-x-reverse">
-                <a href="#home"
-                    class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">الرئيسية</a>
-                <a href="#courses"
-                    class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">الأقسام</a>
-                <a href="#about" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">من
-                    نحن</a>
-                <a href="#contact" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">تواصل
-                    معنا</a>
+                <a href="#home" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">الرئيسية</a>
+                <a href="#courses" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">الأقسام</a>
+                <a href="#about" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">من نحن</a>
+                <a href="#contact" class="nav-link text-sm font-semibold hover:text-glow-light transition-colors">تواصل معنا</a>
                 <a href="#contact"
                     class="btn-glow bg-brand hover:bg-brand-light px-6 py-2 rounded-full text-white font-bold text-sm shadow-lg border border-transparent hover:border-glow-light">
                     سجل الآن
                 </a>
             </div>
 
-            <!-- زر الهامبرغر المطور للموبايل المربوط بالسكريبت -->
-            <div class="md:hidden">
-                <button id="mobile-menu-btn"
-                    class="text-2xl text-glow-light focus:outline-none transition-transform active:scale-90">
+            <!-- زر القائمة للموبايل - تم تعزيز بروزه اللوني ليكون ناصعاً وواضحاً -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-3xl text-glow-light focus:outline-none transition-all duration-200 active:scale-90 p-2 bg-white/5 rounded-xl border border-white/10" type="button">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- القائمة الجانبية المنسدلة للموبايل (تفتح وتغلق بنعومة بلورية) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full glass-strong border-t border-white/10 shadow-2xl transition-all duration-300 animate-fade-in">
+        <!-- القائمة الجانبية المنسدلة للموبايل -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full glass-strong border-t border-white/10 shadow-2xl transition-all duration-300">
             <div class="flex flex-col p-6 space-y-4 text-center font-semibold">
-                <a href="#home"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الرئيسية</a>
-                <a href="#courses"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الأقسام</a>
-                <a href="#about"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">من
-                    نحن</a>
-                <a href="#contact"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">تواصل
-                    معنا</a>
-                <a href="#contact"
-                    class="mobile-link btn-glow bg-brand hover:bg-brand-light py-3 rounded-xl text-white font-bold shadow-lg block">
-                    سجل الآن
-                </a>
-            </div>
-        </div>
-        <!-- القائمة المنسدلة للموبايل (توضع قبل وسم إغلاق nav مباشرة) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full glass-strong border-t border-white/10 shadow-2xl transition-all duration-300">
-            <div class="flex flex-col p-6 space-y-4 text-center font-semibold">
-                <a href="#home"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الرئيسية</a>
-                <a href="#courses"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الأقسام</a>
-                <a href="#about"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">من
-                    نحن</a>
-                <a href="#contact"
-                    class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">تواصل
-                    معنا</a>
-                <a href="#contact"
-                    class="mobile-link btn-glow bg-brand hover:bg-brand-light py-3 rounded-xl text-white font-bold shadow-lg block">
+                <a href="#home" class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الرئيسية</a>
+                <a href="#courses" class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">الأقسام</a>
+                <a href="#about" class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">من نحن</a>
+                <a href="#contact" class="mobile-link py-2 text-white hover:text-glow-light border-b border-white/5 transition-colors">تواصل معنا</a>
+                <a href="#contact" class="mobile-link btn-glow bg-brand hover:bg-brand-light py-3 rounded-xl text-white font-bold shadow-lg block">
                     سجل الآن
                 </a>
             </div>
         </div>
     </nav>
-    <!-- القسم الرئيسي (Hero Section) المخصص للأكاديمية والشهادات - المصحح 100% -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative pt-20">
-        <div class="container mx-auto px-6 text-center" data-aos="zoom-in">
-            <!-- عنوان الموقع الأكاديمي القوي -->
-            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">
-                طريقك نحو التفوق مع <br>
+    <!-- القسم الرئيسي (Hero Section) المخصص للأكاديمية والشهادات - حماية الموبايل -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative pt-24 pb-12 overflow-hidden">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <!-- تم تعديل حجم الخط هنا إلى text-2xl ليتناسب مع الموبايل و md:text-7xl للكمبيوتر -->
+            <h1 class="text-2xl sm:text-3xl md:text-7xl font-black mb-6 leading-tight text-white px-2">
+                طريقك نحو التفوق مع <br class="hidden sm:inline">
                 <span class="text-gradient">معهد منارة حلب</span>
             </h1>
 
-            <!-- الوصف المطور وبنفس الطول البصري -->
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                انضم إلى صرح التفوق الأكاديمي الأول في قلب حلب. نوفر لطلاب الشهادتين بيئة تعليمية متكاملة لضمان أعلى
-                المراتب.
+            <!-- الوصف المطور مع حماية الأبعاد -->
+            <p class="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed px-4">
+                انضم إلى صرح التفوق الأكاديمي الأول في قلب حلب. نوفر لطلاب الشهادتين بيئة تعليمية متكاملة لضمان أعلى المراتب.
             </p>
 
-            <!-- أزرار التفاعل المعدلة بعد تصحيح تعارض الكلاسات -->
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <!-- أزرار التفاعل المرنة والمتمركزة في المنتصف تماماً على الموبايل -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none px-4">
                 <a href="#courses"
-                    class="btn-glow bg-glow text-darkBg px-10 py-4 rounded-full font-bold text-lg transform hover:scale-105 transition-transform w-full md:w-auto">
+                    class="btn-glow bg-glow text-darkBg px-8 py-4 rounded-full font-bold text-lg transform hover:scale-105 transition-transform w-full sm:w-auto flex items-center justify-center">
                     <i class="fa-solid fa-book-bookmark ml-2"></i> استكشف الأقسام
                 </a>
                 <a href="#about"
-                    class="btn-glow glass px-10 py-4 rounded-full font-bold text-lg text-white hover:bg-white/10 w-full md:w-auto border border-white/30">
+                    class="btn-glow glass px-8 py-4 rounded-full font-bold text-lg text-white hover:bg-white/10 w-full sm:w-auto border border-white/30 flex items-center justify-center">
                     <i class="fa-solid fa-circle-info ml-2"></i> عن المعهد
                 </a>
             </div>
         </div>
 
         <!-- مؤشر التمرير الهابط -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-glow-light">
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-glow-light hidden sm:block">
             <i class="fa-solid fa-chevron-down text-3xl"></i>
         </div>
     </section>
